@@ -48,7 +48,8 @@ class CryptoViewController : UIViewController, AnyView, UITableViewDelegate, UIT
         super.viewDidLoad()
         
         view.addSubview(tableView)
-        
+        view.addSubview(messageLabel)
+        view.backgroundColor = .yellow
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -57,7 +58,7 @@ class CryptoViewController : UIViewController, AnyView, UITableViewDelegate, UIT
     override func viewDidLayoutSubviews() { //because of we didnt use storyboard, eachtime we update subviews.
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds // to use same size of screen
-        messageLabel.frame = CGRect(x: view.frame.width/2 - 100, y: view.frame.height/2 - 50,
+        messageLabel.frame = CGRect(x: view.frame.width / 2 - 100, y: view.frame.height / 2 - 50,
                                     width: 200, height: 50)
     }
     
